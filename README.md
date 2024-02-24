@@ -1,7 +1,7 @@
 # GamerClub
 
 Este proyecto fue desarrollado como parte de mi examen final de Programación 1. Consiste en una página web creada principalmente mediante manipulación del DOM y LocalStorage utilizando JavaScript, HTML, CSS y Bootstrap.
-
+![Portada](img/Portada.gif)
 ## Descripción
 
 La página web tiene como objetivo simular un proceso de compra completo en un sitio web. Proporciona una experiencia interactiva que incluye:
