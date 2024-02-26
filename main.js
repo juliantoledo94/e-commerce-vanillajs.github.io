@@ -57,7 +57,7 @@ const productos =[
 
 let productos_contenedor = document.querySelector("#productos")
 
-//Traigo el carrito con get item
+
 let carrito = [];
 carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 let cantidad_elementos_carrito = document.querySelector(".cantidad_elementos_carrito")
@@ -75,7 +75,7 @@ productos_contenedor.appendChild(div_principal_contenedor_productos)
 productos.forEach((producto) =>{
     let div_contenedor_cards = document.createElement("div");
     div_contenedor_cards.classList.add("contenedor_cards","col-lg-4","col-md-6","col-sm-12")
-    //div_contenedor_cards.setAttribute("style","width: 18rem;")
+    
     div_principal_contenedor_productos.appendChild(div_contenedor_cards)
 
     let div_card = document.createElement("div")
@@ -371,9 +371,9 @@ const vaciar_carrito = () =>{
 
 /* CREAMOS LA PRIMERA Y SEGUNDA MODAL, TAMBIEN EL FORMULARIO CON SUS VALIDACIONES Y SU EVENTO SUBMIT */
 document.addEventListener('DOMContentLoaded', function () {
-    // Tu arreglo de productos y otros elementos
     
-    // Crear la estructura de la modal
+    
+    
     let modal = document.createElement('div');
     modal.setAttribute('class', 'modal fade');
     modal.setAttribute('id', 'exampleModal');
@@ -725,7 +725,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Agregar un evento al input para validar cuando cambie
     input_nombre.addEventListener('input', function () {
-        // Expresión regular para permitir solo letras (mayúsculas y minúsculas) y espacios en blanco
+        
         let regex = /^[a-zA-Z\s]+$/;
     
         // Verificar si el campo está vacío o no cumple con la expresión regular
@@ -739,15 +739,15 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     input_nombre_pago.addEventListener('input', function () {
-        // Expresión regular para permitir solo letras (mayúsculas y minúsculas) y espacios en blanco
+        
         let regex = /^[a-zA-Z\s]+$/;
     
-        // Verificar si el campo está vacío o no cumple con la expresión regular
+        
         if (input_nombre_pago.value.trim() === '' || !regex.test(input_nombre_pago.value)) {
-            // Si la validación falla, establecer el mensaje de error personalizado
+            
             input_nombre_pago.setCustomValidity('Ingrese un nombre válido sin números.');
         } else {
-            // Si la validación es exitosa, borrar el mensaje de error personalizado
+            
             input_nombre_pago.setCustomValidity('');
         }
     });
